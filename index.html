@@ -8,55 +8,185 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      color: #222;
+      background: #f4f1ea;
+    }
+
+    /* 顶部图片区域 */
+    .top-image {
+      width: 100%;
+      height: 360px;
+      overflow: hidden;
+      background: #ddd;
+    }
+
+    .top-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* 主体内容 */
+    main {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
-      line-height: 1.6;
+    }
+
+    /* 所有标题居中 */
+    h1, h2, h3 {
+      text-align: center;
     }
 
     h1 {
       color: #1f4e79;
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #7a3e1d;
+      margin-top: 0;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.96);
+      padding: 30px;
+      margin-bottom: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    a {
+      color: #8b4513;
+    }
+
+    ul {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .button-wrapper {
+      text-align: center;
+      margin-top: 20px;
     }
 
     .button {
       display: inline-block;
-      background: #1f4e79;
+      background: #8b4513;
       color: white;
-      padding: 12px 24px;
+      padding: 13px 28px;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
     }
 
     .button:hover {
-      background: #2f75b5;
+      background: #a0522d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* 手机端适配 */
+    @media screen and (max-width: 600px) {
+      .top-image {
+        height: 220px;
+      }
+
+      main {
+        margin: 25px auto;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 22px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <h1>Conference A</h1>
+  <!-- 网页最上方图片 -->
+  <div class="top-image">
+    <img src="images/xian.jpg" alt="Xi'an City">
+  </div>
 
-  <p><strong>Date:</strong> May 20–22, 2026</p>
-  <p><strong>Venue:</strong> Tokyo / Seoul / Online</p>
+  <!-- 图片下方开始正文 -->
+  <main>
 
-  <h2>Documents</h2>
-  <ul>
-    <li><a href="program.pdf" target="_blank">Conference Program</a></li>
-    <li><a href="invitation.pdf" target="_blank">Invitation Letter</a></li>
-    <li><a href="venue.pdf" target="_blank">Venue Information</a></li>
-  </ul>
+    <h1>Conference A</h1>
 
-  <h2>Registration</h2>
-  <p>Please complete your registration using the link below.</p>
+    <div class="subtitle">
+      <p><strong>Date:</strong> May 20–22, 2026</p>
+      <p><strong>Venue:</strong> Xi'an, China / Online</p>
+    </div>
 
-  <a class="button" href="https://forms.office.com/r/你的表单代码" target="_blank">
-    Register Now
-  </a>
+    <section>
+      <h2>About</h2>
+      <p>
+        Welcome to Conference A. This conference will bring together researchers,
+        professionals, and participants from different countries and regions.
+      </p>
+    </section>
 
-  <h2>Contact</h2>
-  <p>Email: conference@example.com</p>
+    <section>
+      <h2>Documents</h2>
+      <ul>
+        <li><a href="program.pdf" target="_blank">Conference Program</a></li>
+        <li><a href="invitation.pdf" target="_blank">Invitation Letter</a></li>
+        <li><a href="venue.pdf" target="_blank">Venue Information</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Registration</h2>
+      <p style="text-align: center;">
+        Please complete your registration using the link below.
+      </p>
+
+      <div class="button-wrapper">
+        <a class="button" href="https://forms.office.com/r/你的表单代码" target="_blank">
+          Register Now
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p style="text-align: center;">
+        Email: conference@example.com
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Conference Organizing Committee
+  </footer>
 
 </body>
 </html>
